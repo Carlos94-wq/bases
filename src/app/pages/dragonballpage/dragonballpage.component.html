@@ -1,0 +1,28 @@
+<h1>Dragon ball page</h1>
+<section class="row">
+    <div class="col-12 col-sm-6">
+        <h3>Personaje</h3>
+        <input type="text" class="form-control" placeholder="Nombre">
+        <input type="text" class="form-control" placeholder="Poder">
+
+        <button class="mt-2 btn btn-primary">Agreagr</button>
+
+    </div>
+    <div class="col-12 col-sm-6">
+        <ul>
+            @for( item of personajes(); track item.id; ){
+                @if (item.Poder >= 8000) {
+                    <li>
+                        <span> {{ item.id }} - {{item.Nombre}}</span>
+                        <strong 
+                            [class.text-danger]="item.Poder > 9000"  
+                            [class.text-primary]="item.Poder < 9000"  
+                            class="text-danger"> {{item.Poder}}
+                        </strong>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+
+</section>
