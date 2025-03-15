@@ -1,0 +1,12 @@
+<h1>Dragon super ball page</h1>
+<section class="row">
+    <div class="col-12 col-sm-6">
+       <app-dragonball-form (newPersonaje)="getPersonaFromFom($event)"/>
+    </div>
+    <div class="col-12 col-sm-6">
+        <app-personaje 
+            Title="Listado de personajes poderosos"
+            [personajes]="dragonballService.personajes()"/>
+    </div>
+
+</section>

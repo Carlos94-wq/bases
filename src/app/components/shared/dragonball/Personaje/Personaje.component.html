@@ -1,0 +1,15 @@
+<h1>{{ Title() }}</h1>
+<ul>
+    @for( item of personajes(); track item.id; ){
+        @if (item.Poder >= 8000) {
+            <li>
+                <span> {{ item.id }} - {{item.Nombre}}</span>
+                <strong 
+                    [class.text-danger]="item.Poder > 9000"  
+                    [class.text-primary]="item.Poder < 9000"  
+                    class="text-danger"> {{item.Poder}}
+                </strong>
+            </li>
+        }
+    }
+</ul>
