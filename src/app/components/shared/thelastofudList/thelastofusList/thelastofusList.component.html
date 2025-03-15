@@ -1,0 +1,16 @@
+
+<div class="row">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card" style="width: 18rem;">
+           @for (item of ListaPersonajes(); track $index) {
+            <img [src]="item.Img" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.Nombre }}</h5>
+                <h4 class="card-title">{{ item.Juego }}</h4>
+                <p class="card-text">{{ item.Descripcion }}</p>
+                <button (click)="sendPersonaje( item.Id)" class="btn btn-primary">Ver Personaje</button>
+            </div>
+           }
+        </div>
+    </div>
+</div>

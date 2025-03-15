@@ -1,0 +1,7 @@
+<p>TheLastOfUsPage works!</p>
+
+<div class="container">
+    <app-thelastofus-list 
+        (PersonaleSeleccionado)="GetPersonaje( $event )"
+        [ListaPersonajes]="TlouService.ListaPersonajes()"/>
+</div>
